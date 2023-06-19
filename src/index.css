@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -181,4 +183,13 @@ button:hover {
   padding: 0.25rem;
   border-radius: 0.25rem;
   outline: none;
+}
+
+.emptyList {
+  margin-Top: 2rem;
+}
+
+.copyright {
+  font-size: .5rem;
+  margin: auto;
 }
