@@ -3,7 +3,7 @@ import SearchItem from "./SearchItem";
 import AddItem from "./AddItem";
 import Content from "./Content";
 import Footer from "./Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [items, setItems] = useState(
@@ -12,6 +12,10 @@ function App() {
 
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    console.log("updating items state");
+  }, [items]);
 
   const setAndSaveItems = (newItems) => {
     setItems(newItems);
@@ -56,7 +60,7 @@ function App() {
       <SearchItem search={search} setSearch={setSearch} />
       <Content
         items={items.filter((item) =>
-          ((item.item).toLowerCase()).includes(search.toLowerCase())
+          item.item.toLowerCase().includes(search.toLowerCase())
         )}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
