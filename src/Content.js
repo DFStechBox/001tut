@@ -1,9 +1,8 @@
-
 import ItemList from "./ItemList";
 
 const Content = ({ items, handleCheck, handleDelete }) => {
   return (
-    <main>
+    <>
       {items.length ? (
         <ItemList
           items={items}
@@ -13,7 +12,7 @@ const Content = ({ items, handleCheck, handleDelete }) => {
       ) : (
         <p className="emptyList">Your list is empty.</p>
       )}
-    </main>
+    </>
   );
 };
 
